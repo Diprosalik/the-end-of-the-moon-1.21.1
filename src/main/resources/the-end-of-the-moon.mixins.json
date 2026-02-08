@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "net.diprosalik.the_end_of_the_moon.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"EntityGravityMixin",
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
