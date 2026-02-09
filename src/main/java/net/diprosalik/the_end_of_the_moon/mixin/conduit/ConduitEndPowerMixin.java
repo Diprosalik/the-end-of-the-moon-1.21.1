@@ -1,4 +1,4 @@
-package net.diprosalik.the_end_of_the_moon.mixin;
+package net.diprosalik.the_end_of_the_moon.mixin.conduit;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -125,7 +125,6 @@ public abstract class ConduitEndPowerMixin {
     /* ------------------------------------------------------------
      * 3. Nautilus-Partikel → Reverse Portal
      * ------------------------------------------------------------ */
-    // 3. Nautilus-Partikel → Reverse Portal
     @Inject(
             method = "spawnNautilusParticles",
             at = @At("HEAD"), // Wir nutzen HEAD, um die gesamte Methode zu kontrollieren

@@ -1,4 +1,4 @@
-package net.diprosalik.the_end_of_the_moon.mixin;
+package net.diprosalik.the_end_of_the_moon.mixin.conduit;
 
 import net.minecraft.client.render.block.entity.ConduitBlockEntityRenderer;
 import net.minecraft.client.texture.SpriteAtlasTexture;

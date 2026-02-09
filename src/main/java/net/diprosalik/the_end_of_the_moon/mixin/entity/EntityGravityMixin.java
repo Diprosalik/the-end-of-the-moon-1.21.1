@@ -1,4 +1,4 @@
-package net.diprosalik.the_end_of_the_moon.mixin;
+package net.diprosalik.the_end_of_the_moon.mixin.entity;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.world.World;

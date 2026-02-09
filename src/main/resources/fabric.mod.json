@@ -3,15 +3,14 @@
 	"id": "the-end-of-the-moon",
 	"version": "${version}",
 	"name": "The End Of The Moon",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Experience the End like it's on the Moon!",
 	"authors": [
-		"Me!"
+		"Diprosalik"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Diprosalik/the-end-of-the-moon-1.21.1.git"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/the-end-of-the-moon/icon.png",
 	"environment": "*",
 	"entrypoints": {
