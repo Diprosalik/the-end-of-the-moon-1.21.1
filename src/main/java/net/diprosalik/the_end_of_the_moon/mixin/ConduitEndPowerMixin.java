@@ -84,7 +84,9 @@ public abstract class ConduitEndPowerMixin {
                 || block == Blocks.PRISMARINE_BRICKS
                 || block == Blocks.DARK_PRISMARINE
                 || block == Blocks.SEA_LANTERN
-                || block == Blocks.END_STONE_BRICKS;
+                || block == Blocks.END_STONE_BRICKS
+                || block == Blocks.PURPUR_BLOCK
+                || block == Blocks.PURPUR_PILLAR;
     }
 
     /* ------------------------------------------------------------
