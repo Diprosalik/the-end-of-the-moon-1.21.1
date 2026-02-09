@@ -15,10 +15,8 @@ public abstract class EntityGravityMixin {
 
     @Inject(method = "getFinalGravity", at = @At("RETURN"), cancellable = true)
     private void modifyGravityInEnd(CallbackInfoReturnable<Double> cir) {
-        // Überprüfen, ob die Entität gerade im Ende ist
+
         if (this.getWorld().getRegistryKey() == World.END) {
-            // cir.getReturnValue() gibt den normalen Wert (0.08 für Spieler) zurück.
-            // Wir multiplizieren ihn mit 0.25 für 1/4 der Schwerkraft.
             cir.setReturnValue(cir.getReturnValue() * 0.25);
         }
     }

@@ -3,13 +3,21 @@
 	"package": "net.diprosalik.the_end_of_the_moon.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
+		"BottleAirMixin",
+		"ConduitEndPowerMixin",
+		"EntityAirVisualMixin",
 		"EntityGravityMixin",
-		"ExampleMixin"
+		"ExampleMixin",
+		"LivingEntityMixin",
+		"PlayerAirMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
 	},
 	"overwrites": {
 		"requireAnnotations": true
-	}
+	},
+	"client": [
+		"ConduitRendererMixin"
+	]
 }
