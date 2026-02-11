@@ -3,7 +3,6 @@
   "package": "net.diprosalik.the_end_of_the_moon.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "BottleAirMixin",
     "ChorusFruitMixin",
     "PlayerAirMixin",
     "conduit.ConduitAttackMixin",
