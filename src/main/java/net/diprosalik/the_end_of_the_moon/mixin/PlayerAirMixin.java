@@ -26,12 +26,6 @@ public abstract class PlayerAirMixin {
                     player.setAir(currentAir - 1);
                 }
 
-                // Wenn die Luft fast leer ist (unter 100), bekommt er schon Nausea
-//                if (currentAir < 50) {
-//                    // Stärke 0 ist Level 1, 200 Ticks = 10 Sekunden
-//                    player.addStatusEffect(new StatusEffectInstance(StatusEffects.DARKNESS, 100, 0, true, false));
-//                }
-
                 if (currentAir <= -20) {
                     player.setAir(-20);
                     if (player.age % 20 == 0) {

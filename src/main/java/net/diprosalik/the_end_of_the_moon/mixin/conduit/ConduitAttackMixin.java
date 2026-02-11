@@ -42,7 +42,7 @@ public abstract class ConduitAttackMixin {
 
                 // Wir suchen ein Ziel, wenn wir keines haben
                 if (accessor.targetEntity == null || !accessor.targetEntity.isAlive()) {
-                    List<LivingEntity> targets = world.getEntitiesByClass(LivingEntity.class, new Box(pos).expand(16.0),
+                    List<LivingEntity> targets = world.getEntitiesByClass(LivingEntity.class, new Box(pos).expand(20.0),
                             e -> e instanceof Monster && e.isAlive());
                     if (!targets.isEmpty()) {
                         accessor.targetEntity = targets.get(world.random.nextInt(targets.size()));

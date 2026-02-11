@@ -1,4 +1,4 @@
-package net.diprosalik.the_end_of_the_moon.mixin;
+package net.diprosalik.the_end_of_the_moon.mixin.visuals;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;

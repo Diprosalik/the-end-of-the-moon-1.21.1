@@ -4,13 +4,15 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "BottleAirMixin",
+    "ChorusFruitMixin",
     "PlayerAirMixin",
-    "SpaceParticlesMixin",
     "conduit.ConduitAttackMixin",
     "conduit.ConduitEndPowerMixin",
     "entity.EntityAirVisualMixin",
     "entity.EntityGravityMixin",
-    "entity.LivingEntityMixin"
+    "entity.LivingEntityMixin",
+    "visuals.MoonDustMixin",
+    "visuals.SpaceParticlesMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -20,5 +22,5 @@
   },
   "client": [
     "conduit.ConduitRendererMixin"
-	]
+  ]
 }

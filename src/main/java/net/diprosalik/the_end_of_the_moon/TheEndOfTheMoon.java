@@ -13,5 +13,7 @@ public class TheEndOfTheMoon implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+
+		ChorusFlower.ClickOnFlowerToHarvest();
 	}
 }
