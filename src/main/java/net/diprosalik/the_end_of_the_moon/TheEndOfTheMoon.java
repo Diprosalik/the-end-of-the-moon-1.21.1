@@ -1,5 +1,6 @@
 package net.diprosalik.the_end_of_the_moon;
 
+import net.diprosalik.the_end_of_the_moon.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +12,6 @@ public class TheEndOfTheMoon implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModItems.registerModItems();
 	}
 }
