@@ -29,7 +29,6 @@ public abstract class PlayerAirMixin {
                 if (currentAir <= -20) {
                     player.setAir(-20);
                     if (player.age % 20 == 0) {
-                        // Wir nutzen generic() statt drown(), um den Gurgel-Sound zu vermeiden
                         player.damage(world.getDamageSources().generic(), 2.0F);
                     }
                 }

@@ -15,11 +15,8 @@ public abstract class LivingEntityMixin {
         LivingEntity entity = (LivingEntity) (Object) this;
 
         if (entity.getWorld().getRegistryKey() == World.END) {
-            // Wir berechnen den Schaden mit einer reduzierten Distanz.
-            // 0.25 entspricht deiner Mondgravitation.
             float adjustedDistance = fallDistance * 0.5F;
 
-            // Wir rufen die originale Logik mit dem neuen Wert auf (einfaches Abrunden)
             int finalDamage = (int) Math.max(0, Math.ceil((adjustedDistance - 3.0F) * damageMultiplier));
             cir.setReturnValue(finalDamage);
         }
@@ -29,8 +26,6 @@ public abstract class LivingEntityMixin {
     private void stopAirRegenInEnd(int air, CallbackInfoReturnable<Integer> cir) {
         LivingEntity entity = (LivingEntity) (Object) this;
         if (entity.getWorld().getRegistryKey() == World.END) {
-            // Wir geben einfach den aktuellen (niedrigen) Wert zurück.
-            // Dadurch "denkt" das Spiel, die Luft wäre schon regeneriert.
             cir.setReturnValue(air);
         }
     }

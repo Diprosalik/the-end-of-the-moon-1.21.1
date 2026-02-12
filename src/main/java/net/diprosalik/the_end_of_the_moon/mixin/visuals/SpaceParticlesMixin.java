@@ -16,12 +16,12 @@ public abstract class SpaceParticlesMixin {
         PlayerEntity player = (PlayerEntity) (Object) this;
         World world = player.getWorld();
 
-        // Nur auf dem Client Partikel spawnen (Performance!)
+
         if (world.isClient && world.getRegistryKey() == World.END) {
             double dist = Math.sqrt(player.getX() * player.getX() + player.getZ() * player.getZ());
 
-            // Partikel in der Schwerelosigkeits-Zone (150 - 900 Blöcke)
-            if (dist > 900 && world.random.nextFloat() < 0.6f) {
+
+            if (dist > 900 && world.random.nextFloat() < 0.7f) {
                 world.addParticle(ParticleTypes.WHITE_ASH,
                         player.getX() + (world.random.nextDouble() - 0.5) * 20,
                         player.getY() + (world.random.nextDouble() - 0.5) * 20,

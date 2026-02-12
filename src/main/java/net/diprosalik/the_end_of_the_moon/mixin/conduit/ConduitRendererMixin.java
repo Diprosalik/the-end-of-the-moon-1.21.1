@@ -20,18 +20,14 @@ public class ConduitRendererMixin {
             Identifier.of("the_end_of_the_moon", "entity/conduit/closed_eye")
     );
 
-    // Wir nutzen den Konstruktor des Renderers (ähnlich wie dein Creeper-Beispiel)
+
     @Inject(method = "<init>", at = @At("TAIL"))
     private void onConstructor(BlockEntityRendererFactory.Context ctx, CallbackInfo ci) {
-        // Hier könnten wir Logik ausführen, wenn der Renderer erstellt wird.
-        // Da die Textur-Felder im ConduitRenderer leider 'static final' sind,
-        // ist der direkte Tausch hier ohne Shadow schwierig.
+
     }
 
-    // Alternative: Wir überschreiben die Methode, die die Textur für das Modell auswählt
-    // Das ist oft sicherer als Variablen-Manipulation
-    @Inject(method = "render", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "render", at = @At("HEAD"))
     private void overrideRender(CallbackInfo ci) {
-        // Wenn dieser Inject kompiliert, haben wir einen stabilen Ankerpunkt.
+
     }
 }

@@ -32,7 +32,7 @@ public abstract class MoonDustMixin {
                         0, 0.05, 0
                 );
             }
-            ci.cancel(); // Verhindert die normalen Vanilla-Partikel
+            ci.cancel();
         }
     }
 }

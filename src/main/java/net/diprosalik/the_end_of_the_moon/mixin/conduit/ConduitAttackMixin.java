@@ -28,19 +28,11 @@ public abstract class ConduitAttackMixin {
 
     @Inject(method = "serverTick", at = @At("HEAD"))
     private static void customEndAttackLogic(World world, BlockPos pos, net.minecraft.block.BlockState state, ConduitBlockEntity blockEntity, CallbackInfo ci) {
-        // Zugriff auf die Instanz-Variablen über den Accessor-Cast
         ConduitAttackMixin accessor = (ConduitAttackMixin)(Object)blockEntity;
 
-        // 1. Nur im Ende und auf dem Server
         if (world instanceof ServerWorld serverWorld && world.getRegistryKey() == World.END) {
+            if (blockEntity.isEyeOpen()) {
 
-            // 2. Prüfen, ob der Conduit die höchste Stufe (42 Blöcke) hat
-            // Wir nutzen hier eine Hilfsmethode oder schauen in die Liste der aktivierenden Blöcke
-            // In 1.21.1 gibt es oft eine Methode wie 'isActive()' oder man prüft die Liste
-            // Hier simulieren wir die Bedingung 'Stufe 42':
-            if (blockEntity.isEyeOpen()) { // 'isActive' ist wahr, wenn der Rahmen steht
-
-                // Wir suchen ein Ziel, wenn wir keines haben
                 if (accessor.targetEntity == null || !accessor.targetEntity.isAlive()) {
                     List<LivingEntity> targets = world.getEntitiesByClass(LivingEntity.class, new Box(pos).expand(20.0),
                             e -> e instanceof Monster && e.isAlive());
@@ -50,20 +42,18 @@ public abstract class ConduitAttackMixin {
                 }
 
                 if (accessor.targetEntity != null) {
-                    // 3. Partikel fliegen lassen
                     spawnAttackParticles(serverWorld, pos, accessor.targetEntity);
 
-                    // 4. 2-Sekunden Cooldown (40 Ticks)
                     if (accessor.endAttackCooldown > 0) {
                         accessor.endAttackCooldown--;
                     } else {
                         world.playSound(
-                                null,                      // Der auslösende Spieler (null = für alle hörbar)
+                                null,
                                 pos.getX(), pos.getY(), pos.getZ(),
                                 net.minecraft.sound.SoundEvents.BLOCK_CONDUIT_ATTACK_TARGET,
                                 net.minecraft.sound.SoundCategory.BLOCKS
                         );
-                        // Schaden zufügen (4.0f = 2 Herzen)
+
                         accessor.targetEntity.damage(world.getDamageSources().magic(), 4.0f);
                         accessor.endAttackCooldown = 40;
                     }
@@ -74,9 +64,7 @@ public abstract class ConduitAttackMixin {
 
     @Unique
     private static void spawnAttackParticles(ServerWorld world, BlockPos pos, LivingEntity target) {
-        Vec3d start = pos.toCenterPos();
         Vec3d end = target.getEyePos();
-        // Erzeugt Partikel, die zum Ziel wandern
         world.spawnParticles(ParticleTypes.REVERSE_PORTAL, end.x, end.y, end.z, 2, 0.2, 0.2, 0.2, 0.02);
         world.spawnParticles(ParticleTypes.WITCH, end.x, end.y, end.z, 1, 0.2, 0.2, 0.2, 0.02);
     }

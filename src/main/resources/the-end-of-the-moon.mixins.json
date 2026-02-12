@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ChorusFruitMixin",
+    "EndIslandExtenderMixin",
     "PlayerAirMixin",
     "conduit.ConduitAttackMixin",
     "conduit.ConduitEndPowerMixin",

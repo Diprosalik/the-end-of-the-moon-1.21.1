@@ -1,5 +1,6 @@
 package net.diprosalik.the_end_of_the_moon;
 
+import net.diprosalik.the_end_of_the_moon.block.ModBlock;
 import net.diprosalik.the_end_of_the_moon.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,6 +14,7 @@ public class TheEndOfTheMoon implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlock.registerModBlocks();
 
 		ChorusFlower.ClickOnFlowerToHarvest();
 	}

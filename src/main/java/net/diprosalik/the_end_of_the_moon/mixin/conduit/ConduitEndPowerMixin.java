@@ -39,7 +39,6 @@ public abstract class ConduitEndPowerMixin {
 
         activatingBlocks.clear();
 
-        // 3x3x3-Check OHNE Wasser
         for (int x = -1; x <= 1; x++) {
             for (int y = -1; y <= 1; y++) {
                 for (int z = -1; z <= 1; z++) {
@@ -51,7 +50,6 @@ public abstract class ConduitEndPowerMixin {
             }
         }
 
-        // Rahmen prüfen (5x5 Kreuzform)
         for (int x = -2; x <= 2; x++) {
             for (int y = -2; y <= 2; y++) {
                 for (int z = -2; z <= 2; z++) {
@@ -127,7 +125,7 @@ public abstract class ConduitEndPowerMixin {
      * ------------------------------------------------------------ */
     @Inject(
             method = "spawnNautilusParticles",
-            at = @At("HEAD"), // Wir nutzen HEAD, um die gesamte Methode zu kontrollieren
+            at = @At("HEAD"),
             cancellable = true
     )
     private static void replaceParticles(
@@ -143,16 +141,15 @@ public abstract class ConduitEndPowerMixin {
         net.minecraft.util.math.random.Random random = world.random;
 
         if (world.random.nextFloat() < 0.3f) {
-            // Partikel direkt im Zentrum des Conduits (0.5 ist die vertikale Mitte des Blocks)
             for (int i = 0; i < 3; i++) {
-                double offsetX = (random.nextDouble() - 0.5) * 1; // Enge Aura
+                double offsetX = (random.nextDouble() - 0.5) * 1;
                 double offsetY = (random.nextDouble() - 0.5) * 1;
                 double offsetZ = (random.nextDouble() - 0.5) * 1;
 
                 world.addParticle(
                         ParticleTypes.REVERSE_PORTAL,
                         pos.getX() + 0.5 + offsetX,
-                        pos.getY() + 0.5 + offsetY, // Hier auf 0.5 geändert, um es nach unten zu setzen
+                        pos.getY() + 0.5 + offsetY,
                         pos.getZ() + 0.5 + offsetZ,
                         0.01 * (random.nextDouble() - 0.5),
                         0.01 * (random.nextDouble() - 0.5),
