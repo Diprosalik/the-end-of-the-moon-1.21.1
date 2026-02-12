@@ -48,7 +48,6 @@ public class ModItems {
                         player.setAir(300);
 
                         if (!player.getAbilities().creativeMode) {
-                            stack.decrement(1);
                             if (stack.isEmpty()) {
                                 return new ItemStack(Items.GLASS_BOTTLE);
                             }
