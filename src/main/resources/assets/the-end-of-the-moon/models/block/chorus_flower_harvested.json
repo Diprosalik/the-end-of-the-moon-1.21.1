@@ -1,7 +1,7 @@
 {
   "parent": "block/block",
   "textures": {
-    "all": "the_end_of_the_moon:block/chorus_flower_harvested"
+    "all": "the-end-of-the-moon:block/chorus_flower_harvested"
   },
   "elements": [
     {

@@ -1,4 +1,4 @@
-package net.diprosalik.the_end_of_the_moon.mixin;
+package net.diprosalik.the_end_of_the_moon.mixin.Chorus;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;

@@ -23,6 +23,6 @@ public class ModBlock {
 
     // Hilfsmethode zur Registrierung
     public static void registerModBlocks() {
-        Registry.register(Registries.BLOCK, Identifier.of("the_end_of_the_moon", "chorus_flower_harvested"), CHORUS_FLOWER_HARVESTED);
+        Registry.register(Registries.BLOCK, Identifier.of("the-end-of-the-moon", "chorus_flower_harvested"), CHORUS_FLOWER_HARVESTED);
     }
 }

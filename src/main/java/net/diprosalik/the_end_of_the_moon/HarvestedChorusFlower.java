@@ -1,18 +1,18 @@
 package net.diprosalik.the_end_of_the_moon;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.ShapeContext;
+import net.minecraft.block.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
-public class HarvestedChorusFlower extends Block {
-    // Die Form des Blocks: 12x12x12 Pixel, mittig platziert
-    protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 2.0, 2.0, 14.0, 14.0, 14.0);
+public class HarvestedChorusFlower extends ChorusFlowerBlock {
+    // Form auf 12x12x12, beginnend bei Y=0 für bündigen Abschluss mit dem Stamm
+    // Von 2.0 auf 0.0 geändert, damit der Block auf dem Stamm aufliegt
+    protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 12.0, 14.0);
 
     public HarvestedChorusFlower(Settings settings) {
-        super(settings);
+        // Wir casten Blocks.CHORUS_PLANT, damit die interne Logik weiß, woran wir hängen
+        super((ChorusPlantBlock) Blocks.CHORUS_PLANT, settings);
     }
 
     @Override
