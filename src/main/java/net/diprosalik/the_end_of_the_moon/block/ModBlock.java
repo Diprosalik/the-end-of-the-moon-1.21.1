@@ -1,6 +1,6 @@
 package net.diprosalik.the_end_of_the_moon.block;
 
-import net.diprosalik.the_end_of_the_moon.HarvestedChorusFlower;
+import net.diprosalik.the_end_of_the_moon.ChorusRootlingBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
@@ -11,18 +11,17 @@ import net.minecraft.util.Identifier;
 
 public class ModBlock {
 
-    // Hier definierst du deinen neuen Block
-    public static final Block CHORUS_FLOWER_HARVESTED = new HarvestedChorusFlower(
+    public static final Block CHORUS_ROOTLING = new ChorusRootlingBlock(
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.PALE_PURPLE)
-                    .ticksRandomly() // Wichtig für das Nachwachsen!
+                    .ticksRandomly() // Wichtig für die Verwandlung zur Blume!
                     .strength(0.4F)
                     .sounds(BlockSoundGroup.WART_BLOCK)
-                    .nonOpaque() // Da der Block kleiner ist (12x12)
+                    .nonOpaque()
     );
 
     // Hilfsmethode zur Registrierung
     public static void registerModBlocks() {
-        Registry.register(Registries.BLOCK, Identifier.of("the-end-of-the-moon", "chorus_flower_harvested"), CHORUS_FLOWER_HARVESTED);
+        Registry.register(Registries.BLOCK, Identifier.of("the-end-of-the-moon", "chorus_rootling"), CHORUS_ROOTLING);
     }
 }

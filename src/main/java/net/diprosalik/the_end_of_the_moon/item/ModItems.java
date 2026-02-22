@@ -1,9 +1,11 @@
 package net.diprosalik.the_end_of_the_moon.item;
 
 import net.diprosalik.the_end_of_the_moon.TheEndOfTheMoon;
+import net.diprosalik.the_end_of_the_moon.block.ModBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
+import net.minecraft.block.Blocks;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -58,6 +60,9 @@ public class ModItems {
                 }
             });
 
+    public static final Item CHORUS_SEEDS = registerItem("chorus_seeds",
+            new AliasedBlockItem(ModBlock.CHORUS_ROOTLING, new Item.Settings().maxCount(64)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(TheEndOfTheMoon.MOD_ID, name), item);
     }
@@ -67,6 +72,10 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> {
             entries.addAfter(Items.HONEY_BOTTLE, CHORUS_FRUIT_GAS_BOTTLE);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.addAfter(Items.NETHER_WART, CHORUS_SEEDS);
         });
     }
 }
