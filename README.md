@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://cdn.modrinth.com/data/cached_images/92cc59e2b82c3780144020a9bfd1db84ca721dbc.png" alt="The End Of The Moon Banner" width="600">
 
-  ### *Experience the End like it's on the Moon!*
+  ### *The End is not the End - It's the beginning of your Space Mission!*
 
   <br>
 
@@ -36,14 +36,21 @@ The whole End will be sourounded with vacuum
 
 You will loose some oxygen every second but less than in water
 
-To breathe oxygen you will have to "eat" an empty bottle (Better solution comming soon)
+To breathe oxygen you will have to right klick with an empty bottle on a Chorus Flower to get a Chorus Fruit Gas Bottle
 
+![chorus fruit gas bottle](https://cdn.modrinth.com/data/cached_images/09d9412b82d42fbf3ac43a872c498c70a960fba6.png)
+
+For a small refill you can also snack a Chorus Fruit ;)
+
+> Tip: Take a Conduit with you to your End fight!
 
 <br>
 
-## **End Conduit**
+### **End Conduit**
 
-To make it more comfortable to live in the End without oxygen, I added a feature to be able to place the conduit in the End and will work without water
+To make it more comfortable to live in the End without oxygen, I added a feature to be able to place the conduit in the End and work without water
+
+It will attack hostiles on max power
 
 Allowed Conduit frame:
 - Prismarine blocks
@@ -57,8 +64,9 @@ Allowed Conduit frame:
 
 ## **Planned Features**
 
-- Conduit **attacking** Endermen
-- More ways to get **oxygen**
+- small **structures**
+- end fight **oxygen source**
+- small **terrain generation** change
 
 <br>
 
@@ -75,7 +83,7 @@ Allowed Conduit frame:
 <br>
 
 <div align="center">
-  <sub>Version 1.0.0-alpha.</sub>
+  <sub>Version 1.0.2-alpha.</sub>
   <br>
   ⚠️ Note: This is an Alpha version. Please report any bugs via the Issue Tracker!
 </div>
