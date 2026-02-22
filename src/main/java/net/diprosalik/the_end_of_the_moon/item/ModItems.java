@@ -60,6 +60,9 @@ public class ModItems {
                 }
             });
 
+    public static final Item CHORUS_SHROOM = registerItem("chorus_shroom",
+            new AliasedBlockItem(ModBlock.CHORUS_SHROOM, new Item.Settings().maxCount(64)));
+
     public static final Item CHORUS_SEEDS = registerItem("chorus_seeds",
             new AliasedBlockItem(ModBlock.CHORUS_ROOTLING, new Item.Settings().maxCount(64)));
 
@@ -76,6 +79,10 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.addAfter(Items.NETHER_WART, CHORUS_SEEDS);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.addAfter(Items.WARPED_FUNGUS, CHORUS_SHROOM);
         });
     }
 }

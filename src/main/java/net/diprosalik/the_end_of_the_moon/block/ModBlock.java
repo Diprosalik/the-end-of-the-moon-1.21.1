@@ -1,6 +1,7 @@
 package net.diprosalik.the_end_of_the_moon.block;
 
 import net.diprosalik.the_end_of_the_moon.ChorusRootlingBlock;
+import net.diprosalik.the_end_of_the_moon.ChorusShroomBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
@@ -20,8 +21,18 @@ public class ModBlock {
                     .nonOpaque()
     );
 
+    public static final Block CHORUS_SHROOM = new ChorusShroomBlock(
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.PALE_PURPLE)
+                    .strength(0.1F) // Sehr leicht zu zerbrechen
+                    .sounds(BlockSoundGroup.GRASS)
+                    .nonOpaque()
+                    .breakInstantly()
+    );
+
     // Hilfsmethode zur Registrierung
     public static void registerModBlocks() {
         Registry.register(Registries.BLOCK, Identifier.of("the-end-of-the-moon", "chorus_rootling"), CHORUS_ROOTLING);
+        Registry.register(Registries.BLOCK, Identifier.of("the-end-of-the-moon", "chorus_shroom"), CHORUS_SHROOM);
     }
 }

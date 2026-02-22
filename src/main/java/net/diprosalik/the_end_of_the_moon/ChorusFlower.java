@@ -42,7 +42,7 @@ public class ChorusFlower {
                         world.breakBlock(pos, false, player);
 
                         // 2. Deine Samen manuell spawnen (0-2 Stück)
-                        int dropCount = world.random.nextBetween(0, 2);
+                        int dropCount = world.random.nextBetween(1, 4);
                         if (dropCount > 0) {
                             Block.dropStack(world, pos, new ItemStack(ModItems.CHORUS_SEEDS, dropCount));
                         }

@@ -2,9 +2,9 @@
 	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"2": "the-end-of-the-moon:block/head",
-		"3": "the-end-of-the-moon:block/stem",
-		"particle": "the-end-of-the-moon:block/head"
+		"2": "the-end-of-the-moon:block/chorus_rootling/head",
+		"3": "the-end-of-the-moon:block/chorus_rootling/stem",
+		"particle": "the-end-of-the-moon:block/chorus_rootling/head"
 	},
 	"elements": [
 		{
