@@ -46,6 +46,43 @@ For a small refill you can also snack a Chorus Fruit ;)
 
 <br>
 
+### **New World Generagtion**
+
+<br>
+
+- Pointed End Island
+
+<div>
+  <img 
+src="https://cdn.modrinth.com/data/cached_images/90017c85077964a87494f0bcfb99a3f9a7f2bfff.png" alt="New World Generagtion" width="500">
+</div>
+
+<br>
+
+- Comming Soon ...
+
+<div>
+  <img 
+src="https://cdn.modrinth.com/data/cached_images/3035b8d063f8a2b5927f37bda39d19365d6a3d25.png" alt="Plant Collonies" width="500">
+</div>
+
+<br>
+
+### **Plants**
+- Chorus Seeds
+  - Droppable by: Chorus Flower (1-4)
+  - Usage: Plant it on the End Stone to grow a new Chorus Plant
+  - Changes: Chorus Flower will no longer drop its Block on breaking
+
+![chorus seeds](https://cdn.modrinth.com/data/cached_images/50c9d85af439c4175b454bbcfaa9d89207ef76b6.png)
+
+- Chorus Shroom (meanwhile only for creative)
+  - Usage: Decorative Plant
+
+![chorus shroom](https://cdn.modrinth.com/data/cached_images/459de1faa07d3d97dd7c996374239d2a397fc246.png)
+
+<br>
+
 ### **End Conduit**
 
 To make it more comfortable to live in the End without oxygen, I added a feature to be able to place the conduit in the End and work without water
@@ -66,7 +103,7 @@ Allowed Conduit frame:
 
 - small **structures**
 - end fight **oxygen source**
-- small **terrain generation** change
+- Chorus Shroom **survival** integration
 
 <br>
 
@@ -83,7 +120,7 @@ Allowed Conduit frame:
 <br>
 
 <div align="center">
-  <sub>Version 1.0.2-alpha.</sub>
+  <sub>Version 1.0.3-alpha.</sub>
   <br>
   ⚠️ Note: This is an Alpha version. Please report any bugs via the Issue Tracker!
 </div>
