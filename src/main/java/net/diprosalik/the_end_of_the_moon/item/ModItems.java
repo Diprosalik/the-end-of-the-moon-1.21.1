@@ -1,5 +1,6 @@
 package net.diprosalik.the_end_of_the_moon.item;
 
+import net.diprosalik.the_end_of_the_moon.ChorusRootlingBlock;
 import net.diprosalik.the_end_of_the_moon.TheEndOfTheMoon;
 import net.diprosalik.the_end_of_the_moon.block.ModBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -69,9 +70,13 @@ public class ModItems {
     public static final Item CHORUS_SEEDS = registerItem("chorus_seeds",
             new AliasedBlockItem(ModBlock.CHORUS_ROOTLING, new Item.Settings().maxCount(64)));
 
+    public static final Item ChorusRootlingBlock = registerItem("chorus_rootling",
+            new AliasedBlockItem(ModBlock.CHORUS_ROOTLING, new Item.Settings().maxCount(64)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(TheEndOfTheMoon.MOD_ID, name), item);
     }
+
 
     public static void registerModItems() {
         TheEndOfTheMoon.LOGGER.info("Registering Mod Items for " + TheEndOfTheMoon.MOD_ID);
@@ -90,6 +95,10 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.addAfter(ModItems.CHORUS_SHROOM, ZENITH_SHROOM);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.addBefore(Items.CHORUS_PLANT, ChorusRootlingBlock);
         });
     }
 }

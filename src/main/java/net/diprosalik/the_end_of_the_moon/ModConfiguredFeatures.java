@@ -19,14 +19,20 @@ public class ModConfiguredFeatures {
             Identifier.of("the-end-of-the-moon", "chorus_shroom_patch"));
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
-        context.register(ZENITH_SHROOM_KEY, new ConfiguredFeature<>(Feature.SIMPLE_BLOCK,
-                new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlock.ZENITH_SHROOM))));
+        context.register(ZENITH_SHROOM_KEY, new ConfiguredFeature<>(Feature.FLOWER,
+                new RandomPatchFeatureConfig(
+                        4,
+                        3,
+                        3,
+                        PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                                new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlock.ZENITH_SHROOM)))
+                )));
 
         context.register(CHORUS_SHROOM_PATCH_KEY, new ConfiguredFeature<>(Feature.FLOWER,
                 new RandomPatchFeatureConfig(
-                        96, // Anzahl der Versuche pro Gruppe (leicht reduziert für schönere Cluster)
-                        7,  // Radius
-                        3,  // Vertikale Streuung
+                        96,
+                        7,
+                        3,
                         PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                                 new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(
                                         DataPool.<BlockState>builder()

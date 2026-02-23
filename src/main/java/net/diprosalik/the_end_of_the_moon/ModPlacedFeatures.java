@@ -21,7 +21,7 @@ public class ModPlacedFeatures {
         context.register(ZENITH_SHROOM_PLACED_KEY, new PlacedFeature(
                 configuredFeatureLookup.getOrThrow(ModConfiguredFeatures.ZENITH_SHROOM_KEY),
                 List.of(
-                        RarityFilterPlacementModifier.of(46), // Etwas seltener gemacht
+                        RarityFilterPlacementModifier.of(45), // Etwas seltener gemacht
                         SquarePlacementModifier.of(),
                         PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                         BiomePlacementModifier.of()
