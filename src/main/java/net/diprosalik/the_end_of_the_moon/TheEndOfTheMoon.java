@@ -2,6 +2,8 @@ package net.diprosalik.the_end_of_the_moon;
 
 import net.diprosalik.the_end_of_the_moon.block.ModBlock;
 import net.diprosalik.the_end_of_the_moon.item.ModItems;
+import net.diprosalik.the_end_of_the_moon.particle.ChorusShroomParticle;
+import net.diprosalik.the_end_of_the_moon.particle.ModParticles;
 import net.diprosalik.the_end_of_the_moon.potion.ModPotions;
 import net.fabricmc.api.ModInitializer;
 
@@ -10,14 +12,20 @@ import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.particle.Particle;
+import net.minecraft.client.particle.ParticleFactory;
+import net.minecraft.client.particle.SpriteProvider;
+import net.minecraft.client.world.ClientWorld;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.potion.Potions;
 import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
+import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -62,5 +70,20 @@ public class TheEndOfTheMoon implements ModInitializer {
 		FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
 			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.ZENITH_SHROOM, ModPotions.POTION_OF_LEVITATION);
 		});
+	}
+
+	public static class Factory implements ParticleFactory<SimpleParticleType> {
+		private final SpriteProvider spriteProvider;
+
+        public Factory(SpriteProvider spriteProvider) {
+            this.spriteProvider = spriteProvider;
+        }
+
+        @Override
+		public @Nullable Particle createParticle(SimpleParticleType parameters, ClientWorld world, double x, double y, double z,
+												 double velocityX, double velocityY, double velocityZ) {
+			return new ChorusShroomParticle(world, x, y, z, this.spriteProvider, velocityX, velocityY, velocityZ);
+		}
+
 	}
 }
