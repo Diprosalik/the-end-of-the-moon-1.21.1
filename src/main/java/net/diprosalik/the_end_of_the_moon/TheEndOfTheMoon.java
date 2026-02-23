@@ -12,12 +12,7 @@ import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.GenerationStep;
-import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,13 +42,11 @@ public class TheEndOfTheMoon implements ModInitializer {
 			}
 			return null; // Andere Loot-Tables werden nicht verändert
 		});
-	}
 
-	public static void registerWorldGen() {
 		BiomeModifications.addFeature(
-				BiomeSelectors.foundInTheEnd(), // Entspricht BiomeKeys.THE_END etc.
+				BiomeSelectors.foundInTheEnd(), // Spawnt in allen End-Inseln
 				GenerationStep.Feature.VEGETAL_DECORATION,
-				ModPlacedFeatures.CHORUS_SHROOM_PLACED_KEY // Dein Key von oben
+				ModPlacedFeatures.ZENITH_SHROOM_PLACED_KEY
 		);
 	}
 }
