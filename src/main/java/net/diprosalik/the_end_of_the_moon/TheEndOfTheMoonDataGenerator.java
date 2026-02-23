@@ -1,5 +1,6 @@
 package net.diprosalik.the_end_of_the_moon;
 
+import net.diprosalik.the_end_of_the_moon.datagen.ModEnglishLangProvider;
 import net.diprosalik.the_end_of_the_moon.datagen.WorldGenerator;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -11,13 +12,12 @@ public class TheEndOfTheMoonDataGenerator implements DataGeneratorEntrypoint {
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
-		// Hier fügst du den World Generator hinzu
 		pack.addProvider(WorldGenerator::new);
+		pack.addProvider(ModEnglishLangProvider::new);
 	}
 
 	@Override
 	public void buildRegistry(RegistryBuilder registryBuilder) {
-		// Hier "fütterst" du den Generator mit deinen Bootstraps
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 	}
