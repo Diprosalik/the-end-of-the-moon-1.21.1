@@ -21,7 +21,7 @@ public class ModPlacedFeatures {
         context.register(ZENITH_SHROOM_PLACED_KEY, new PlacedFeature(
                 configuredFeatureLookup.getOrThrow(ModConfiguredFeatures.ZENITH_SHROOM_KEY),
                 List.of(
-                        RarityFilterPlacementModifier.of(48), // Etwas seltener gemacht
+                        RarityFilterPlacementModifier.of(46), // Etwas seltener gemacht
                         SquarePlacementModifier.of(),
                         PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                         BiomePlacementModifier.of()
@@ -31,7 +31,7 @@ public class ModPlacedFeatures {
         context.register(CHORUS_SHROOM_PLACED_KEY, new PlacedFeature(
                 configuredFeatureLookup.getOrThrow(ModConfiguredFeatures.CHORUS_SHROOM_PATCH_KEY),
                 List.of(
-                        CountPlacementModifier.of(4), // 4 Gruppen pro Chunk -> Häufig!
+                        RarityFilterPlacementModifier.of(6),
                         SquarePlacementModifier.of(),
                         PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP,
                         BiomePlacementModifier.of()

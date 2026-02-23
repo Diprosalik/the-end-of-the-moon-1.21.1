@@ -12,6 +12,8 @@ import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeKeys;
 import net.minecraft.world.gen.GenerationStep;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,7 +46,14 @@ public class TheEndOfTheMoon implements ModInitializer {
 		});
 
 		BiomeModifications.addFeature(
-				BiomeSelectors.foundInTheEnd(), // Spawnt in allen End-Inseln
+				BiomeSelectors.foundInTheEnd().and(BiomeSelectors.excludeByKey(BiomeKeys.THE_END)),
+				GenerationStep.Feature.VEGETAL_DECORATION,
+				ModPlacedFeatures.CHORUS_SHROOM_PLACED_KEY
+		);
+
+
+		BiomeModifications.addFeature(
+				BiomeSelectors.foundInTheEnd().and(BiomeSelectors.excludeByKey(BiomeKeys.THE_END)),
 				GenerationStep.Feature.VEGETAL_DECORATION,
 				ModPlacedFeatures.ZENITH_SHROOM_PLACED_KEY
 		);
