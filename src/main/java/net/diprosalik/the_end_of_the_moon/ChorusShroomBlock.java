@@ -54,7 +54,7 @@ public class ChorusShroomBlock extends Block {
     @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         // Radius für die Spieler-Erkennung (bleibt bei ca. 2-3 Blöcken sinnvoll)
-        double detectionRange = 3.0;
+        double detectionRange = 2.0;
         if (world.getClosestPlayer(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, detectionRange, false) != null) {
 
             // Wir erhöhen die Anzahl der Versuche etwas, da das Gebiet größer ist
