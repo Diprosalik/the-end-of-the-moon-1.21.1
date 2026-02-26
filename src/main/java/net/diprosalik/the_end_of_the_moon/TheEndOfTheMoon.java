@@ -71,19 +71,4 @@ public class TheEndOfTheMoon implements ModInitializer {
 			builder.registerPotionRecipe(Potions.AWKWARD, ModItems.ZENITH_SHROOM, ModPotions.POTION_OF_LEVITATION);
 		});
 	}
-
-	public static class Factory implements ParticleFactory<SimpleParticleType> {
-		private final SpriteProvider spriteProvider;
-
-        public Factory(SpriteProvider spriteProvider) {
-            this.spriteProvider = spriteProvider;
-        }
-
-        @Override
-		public @Nullable Particle createParticle(SimpleParticleType parameters, ClientWorld world, double x, double y, double z,
-												 double velocityX, double velocityY, double velocityZ) {
-			return new ChorusShroomParticle(world, x, y, z, this.spriteProvider, velocityX, velocityY, velocityZ);
-		}
-
-	}
 }

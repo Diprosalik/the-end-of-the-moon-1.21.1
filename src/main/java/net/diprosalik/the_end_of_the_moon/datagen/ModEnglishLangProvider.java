@@ -24,5 +24,6 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add("item.minecraft.potion.effect.potion_of_levitation", "Potion of Levitation");
         translationBuilder.add("item.minecraft.splash_potion.effect.potion_of_levitation", "Splash Potion of Levitation");
         translationBuilder.add("item.minecraft.lingering_potion.effect.potion_of_levitation", "Lingering Potion of Levitation");
+        translationBuilder.add("item.minecraft.tipped_arrow.effect.potion_of_levitation", "Arrow of Levitation");
     }
 }
