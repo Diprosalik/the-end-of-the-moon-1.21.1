@@ -51,13 +51,19 @@ public abstract class LivingEntityMixin {
         if (entity.getWorld().getRegistryKey() != World.END) return false;
 
         double distanceSq = entity.squaredDistanceTo(0, entity.getY(), 0);
-        boolean nearSpawn = distanceSq <= 10000.0;
+        boolean nearSpawn = distanceSq <= 10000.0; // 100 Blöcke Radius
 
-        if (entity.getWorld().isClient) return nearSpawn;
+        // Auf dem Client können wir den Drachen-Status nicht zuverlässig prüfen.
+        // Damit es nicht buggt, lassen wir den Client im Zweifel Luft verlieren.
+        // Der Server überschreibt den Wert sowieso alle paar Ticks mit dem echten Wert.
+        if (entity.getWorld().isClient) {
+            return false;
+        }
 
         if (entity.getWorld() instanceof ServerWorld serverWorld) {
             var fight = serverWorld.getEnderDragonFight();
-            return nearSpawn && fight != null && !fight.hasPreviouslyKilled(); // hasPreviouslyKilled
+            // Schutz nur, wenn man nah am Spawn ist UND der Kampf noch aktiv/nicht abgeschlossen ist
+            return nearSpawn && fight != null && !fight.hasPreviouslyKilled();
         }
         return false;
     }
