@@ -20,6 +20,8 @@ public class ModEnglishLangProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.ChorusRootlingBlock, "Chorus Rootling");
         translationBuilder.add(ModItems.CHORUS_SHROOM, "Chorus Shroom");
         translationBuilder.add(ModItems.ZENITH_SHROOM, "Zenith Shroom");
+        translationBuilder.add(ModBlock.POTTED_CHORUS_SHROOM, "Potted Chorus Shroom");
+        translationBuilder.add(ModBlock.POTTED_ZENITH_SHROOM, "Potted Zenith Shroom");
 
         translationBuilder.add("item.minecraft.potion.effect.potion_of_levitation", "Potion of Levitation");
         translationBuilder.add("item.minecraft.splash_potion.effect.potion_of_levitation", "Splash Potion of Levitation");

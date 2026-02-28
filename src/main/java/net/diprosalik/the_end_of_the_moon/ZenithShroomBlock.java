@@ -10,10 +10,10 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldView;
 
-public class ZenithShroom extends Block {
+public class ZenithShroomBlock extends Block {
     protected static final VoxelShape SHAPE = Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 9.0, 12.0);
 
-    public ZenithShroom(Settings settings) {
+    public ZenithShroomBlock(Settings settings) {
         super(settings);
     }
 
