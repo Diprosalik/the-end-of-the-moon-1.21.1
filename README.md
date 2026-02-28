@@ -34,7 +34,7 @@ Most Entities will be affected by that
 
 The whole End will be sourounded with vacuum
 
-You will loose some oxygen every second but less than in water
+You will loose some oxygen every second but you will be protected during your first end fight!
 
 To breathe oxygen you will have to right klick with an empty bottle on a Chorus Flower to get a Chorus Fruit Gas Bottle
 
@@ -42,15 +42,13 @@ To breathe oxygen you will have to right klick with an empty bottle on a Chorus 
 
 For a small refill you can also snack a Chorus Fruit ;)
 
-> Tip: Take a Conduit with you to your End fight!
-
 <br>
 
 ### **New World Generagtion**
 
 <br>
 
-- Pointed End Island
+- **Pointed End Islands**
 
 <div>
   <img 
@@ -59,33 +57,40 @@ src="https://cdn.modrinth.com/data/cached_images/90017c85077964a87494f0bcfb99a3f
 
 <br>
 
-- Comming Soon ...
-
-<div>
-  <img 
-src="https://cdn.modrinth.com/data/cached_images/3035b8d063f8a2b5927f37bda39d19365d6a3d25.png" alt="Plant Collonies" width="500">
-</div>
-
-<br>
-
 ### **Plants**
-- Chorus Seeds
+- **Chorus Seeds**
   - Droppable by: Chorus Flower (1-4)
   - Usage: Plant it on the End Stone to grow a new Chorus Plant
   - Changes: Chorus Flower will no longer drop its Block on breaking
 
 ![chorus seeds](https://cdn.modrinth.com/data/cached_images/50c9d85af439c4175b454bbcfaa9d89207ef76b6.png)
 
-- Chorus Shroom (meanwhile only for creative)
-  - Usage: Decorative Plant
+<br>
 
-![chorus shroom](https://cdn.modrinth.com/data/cached_images/459de1faa07d3d97dd7c996374239d2a397fc246.png)
+- **Shrooms**
+
+<div style="display: flex; gap: 10px; justify-content: center;">
+    <img src="https://cdn.modrinth.com/data/cached_images/459de1faa07d3d97dd7c996374239d2a397fc246.png" alt="chorus shroom" style="width: 200px; height: auto; object-fit: cover;">
+    <img src="https://cdn.modrinth.com/data/cached_images/f7a454a40101dfea3841a89563e5e17672060391.png" alt="zenith shroom" style="width: 200px; height: auto; object-fit: cover;">
+</div>
+
+<br>
+
+- Chorus Shroom 
+  - Usage: Stand next to it to slowly regain air
+  - Pottable: Yes
+  - Rarity: Common
+
+- Zenith Shroom 
+  - Usage: Use it in a Brewing Stand to get a Potion of Levitation
+  - Pottable: Yes
+  - Rarity: Rare
 
 <br>
 
 ### **End Conduit**
 
-To make it more comfortable to live in the End without oxygen, I added a feature to be able to place the conduit in the End and work without water
+To make it more comfortable to live in the End without oxygen, you will be able to place a conduit in the End, which will work without water
 
 It will attack hostiles on max power
 
@@ -101,9 +106,8 @@ Allowed Conduit frame:
 
 ## **Planned Features**
 
-- small **structures**
-- end fight **oxygen source**
-- Chorus Shroom **survival** integration
+- Small **structures**
+- **REI** integration
 
 <br>
 
@@ -120,7 +124,7 @@ Allowed Conduit frame:
 <br>
 
 <div align="center">
-  <sub>Version 1.0.3-alpha.</sub>
+  <sub>Version 1.1.0-beta.</sub>
   <br>
-  ⚠️ Note: This is an Alpha version. Please report any bugs via the Issue Tracker!
+  ⚠️ Note: This is a Beta version. Please report any bugs via the Issue Tracker!
 </div>
